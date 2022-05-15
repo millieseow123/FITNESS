@@ -11,5 +11,5 @@ public interface Queries {
         "select count(*) as user_count from user where email = ? and password = sha1(?)";
 
         public static final String SQL_INSERT_NEW_EXERCISE = 
-        "insert into tracker (date, type_of_exercise, duration, calories, muscle_group) values (?, ?, ?, ?, ?)";
+        "insert into tracker (date, type_of_exercise, duration, calories, muscle_group, email) values (?, ?, ?, ?, ?, ?)";
 }

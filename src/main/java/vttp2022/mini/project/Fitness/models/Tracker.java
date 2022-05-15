@@ -8,6 +8,7 @@ public class Tracker {
     private String duration;
     private int calories;
     private String muscle_group;
+    private String email;
     
     public Date getDate() {
         return date;
@@ -38,6 +39,12 @@ public class Tracker {
     }
     public void setMuscle_group(String muscle_group) {
         this.muscle_group = muscle_group;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     

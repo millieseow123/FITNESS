@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,8 +30,10 @@ public class FitnessController {
     @Autowired
     private TrackerService trackerSvc;
 
+
     @PostMapping("/signup")
     public ModelAndView signup(@RequestBody MultiValueMap<String, String> form) {
+
         User user = convertSignUp(form);
         ModelAndView mvc = new ModelAndView();
         try {
@@ -60,24 +63,27 @@ public class FitnessController {
             mvc.setViewName("logExercises");
         }
         return mvc;
-    }
+    }        
 
-    @PostMapping("/log") //maybe save this to wger?
-    public ModelAndView logExercise(@RequestBody MultiValueMap<String, String> form) {
+
+    @PostMapping("/log") //get email :(((())))
+    public ModelAndView logExercise(@RequestBody MultiValueMap<String, String> form ) {
+
         Tracker tracker = convertExercise(form);
-
+   
         ModelAndView mvc = new ModelAndView();
         try {
             trackerSvc.addNewExercise(tracker);
             mvc.addObject("logSuccess",
                     "Sucessfully added exercise");
         } catch (FitnessException e) {
-            mvc.addObject("error", "Error:  %s".formatted(e.getReason()));
+            mvc.addObject("logError", "Error:  %s".formatted(e.getReason()));
             mvc.setStatus(HttpStatus.BAD_REQUEST);
             e.printStackTrace();
         }
         mvc.setViewName("summary");
         return mvc;
+
 
         // post .../login
         // if fail, send back to login page
@@ -93,4 +99,5 @@ public class FitnessController {
         // can put query string here, maybe can have a form asking for dates to
         // return or ask for muscle group/ filter.
     }
+
 }

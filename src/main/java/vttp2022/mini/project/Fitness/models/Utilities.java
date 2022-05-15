@@ -46,6 +46,7 @@ public class Utilities {
         tracker.setDuration(form.getFirst("duration"));
         tracker.setCalories(Integer.parseInt(form.getFirst("calories")));
         tracker.setMuscle_group(form.getFirst("muscle_group"));
+        tracker.setEmail(form.getFirst("email"));
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         try {

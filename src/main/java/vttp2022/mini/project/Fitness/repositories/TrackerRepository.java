@@ -15,7 +15,8 @@ public class TrackerRepository {
     private JdbcTemplate template;
     
     public boolean logExercise(Tracker tracker){
-        int count = template.update(SQL_INSERT_NEW_EXERCISE, tracker.getDate(), tracker.getType_of_exercise(), tracker.getDuration(), tracker.getCalories(), tracker.getMuscle_group());
+        int count = template.update(SQL_INSERT_NEW_EXERCISE, tracker.getDate(), tracker.getType_of_exercise(), 
+            tracker.getDuration(), tracker.getCalories(), tracker.getMuscle_group(), tracker.getEmail());
         return 1 == count;
     }}
     

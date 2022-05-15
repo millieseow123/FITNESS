@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
     integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,8 +20,7 @@
   <div class="container">
     <br><h2 data-th-text="${signupSuccess}"></h2><br>
 
-    <span class="border">
-      <form class="px-4 py-3" method="POST" action="/login">
+      <form name="form" class="px-4 py-3" method="POST" action="/login">
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
           <input type="email" class="form-control" name="email" placeholder="email@example.com">
@@ -45,7 +42,7 @@
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="signup.html">New around here? Sign up</a>
       <a class="dropdown-item" href="#">Forgot password?</a>
-  </div></span>
+  </div>
 </body>
 
 </html>

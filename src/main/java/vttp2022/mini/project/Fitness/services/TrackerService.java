@@ -30,7 +30,7 @@ public class TrackerService {
     // @Value("${wger.api.key}")
     private String exerciseinfo;
 
-    public List<String> getWorkouts() {
+    public List<String> getWorkouts() { 
         List<String> result = new LinkedList<>();
 
         String url = UriComponentsBuilder.fromUriString(wgerAPI)

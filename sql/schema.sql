@@ -13,7 +13,7 @@ create table user(
 create table tracker(
     date date not null,
     type_of_exercise varchar(128),
-    duration float,
+    duration varchar(64),
     calories int,
     muscle_group varchar(128),
     email varchar(64) not null,
