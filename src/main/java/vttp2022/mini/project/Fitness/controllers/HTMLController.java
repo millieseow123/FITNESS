@@ -13,5 +13,10 @@ public class HTMLController {
         return "signup";
     }
 
+    @GetMapping("index.html") 
+    public String logExercise() {
+        return "logExercise";
+    }
+
     //forget password
 }

@@ -22,8 +22,12 @@ public class TrackerService {
     private TrackerRepository trackerRepo;
 
     public void addNewExercise(Tracker tracker) throws FitnessException {
-        if (!trackerRepo.logExercise(tracker))
+        if (!trackerRepo.addNewExercise(tracker))
             throw new FitnessException("Error adding exercise. Please check with Admin.");
+    }
+
+    public List<Tracker> getAllExercises() {
+        return trackerRepo.selectAllExercises();
     }
 
     public static final String wgerAPI = "https://wger.de/api/v2/";

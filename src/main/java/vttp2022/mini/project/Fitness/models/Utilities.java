@@ -58,4 +58,22 @@ public class Utilities {
 
         return tracker;
     }
+
+    public static Tracker convertExercise(SqlRowSet rs) {
+        Tracker tracker = new Tracker();
+        tracker.setType_of_exercise(rs.getString("type_of_exercise"));
+        tracker.setDuration(rs.getString("duration"));
+        tracker.setCalories(Integer.parseInt(rs.getString("calories")));
+        tracker.setMuscle_group(rs.getString("muscle_group"));
+        tracker.setEmail(rs.getString("email"));
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date = format.parse(rs.getString("date"));
+            tracker.setDate(date);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return tracker;
+    }
 }

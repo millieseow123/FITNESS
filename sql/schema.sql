@@ -11,6 +11,7 @@ create table user(
 );
 
 create table tracker(
+    no int not null auto_increment,
     date date not null,
     type_of_exercise varchar(128),
     duration varchar(64),
@@ -18,7 +19,7 @@ create table tracker(
     muscle_group varchar(128),
     email varchar(64) not null,
 
-    primary key(date),
+    primary key(no),
     constraint fk_email
         foreign key(email)
         references user(email)

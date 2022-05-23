@@ -1,22 +1,34 @@
 package vttp2022.mini.project.Fitness.controllers;
 
+import org.apache.maven.model.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import jakarta.json.Json;
+import jakarta.json.JsonObjectBuilder;
 import vttp2022.mini.project.Fitness.models.Tracker;
 import vttp2022.mini.project.Fitness.models.User;
+import vttp2022.mini.project.Fitness.repositories.TrackerRepository;
 import vttp2022.mini.project.Fitness.services.FitnessException;
 import vttp2022.mini.project.Fitness.services.UserService;
 import vttp2022.mini.project.Fitness.services.TrackerService;
 
 import static vttp2022.mini.project.Fitness.models.Utilities.*;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpSession;
 
@@ -29,6 +41,9 @@ public class FitnessController {
 
     @Autowired
     private TrackerService trackerSvc;
+
+    @Autowired
+    private TrackerRepository trackerRepo;
 
 
     @PostMapping("/signup")
@@ -63,12 +78,12 @@ public class FitnessController {
             mvc.setViewName("logExercises");
         }
         return mvc;
-    }        
+    }   
+  
 
-
-    @PostMapping("/log") //get email :(((())))
-    public ModelAndView logExercise(@RequestBody MultiValueMap<String, String> form ) {
-
+    @PostMapping("/log") 
+    public ModelAndView logExercise(@RequestBody MultiValueMap<String, String> form, HttpSession sess ) {
+        form.add("email", (String)sess.getAttribute("username"));
         Tracker tracker = convertExercise(form);
    
         ModelAndView mvc = new ModelAndView();
@@ -82,9 +97,8 @@ public class FitnessController {
             e.printStackTrace();
         }
         mvc.setViewName("summary");
+        
         return mvc;
-
-
         // post .../login
         // if fail, send back to login page
         // if success, send to logging page
@@ -98,6 +112,24 @@ public class FitnessController {
         // GET from DB & API (additional info)
         // can put query string here, maybe can have a form asking for dates to
         // return or ask for muscle group/ filter.
+    }
+
+    @GetMapping("/test.html")
+    public ModelAndView getAllExercises() {
+        ModelAndView mvc = new ModelAndView();
+
+        mvc.setViewName("test");
+        List<Tracker> tracker = trackerSvc.getAllExercises();
+        mvc.addObject("exercises", tracker);
+
+        return mvc;
+    }
+
+    @GetMapping("/search")
+    public String getSearch(@RequestParam String request) {
+        List<String> exercises = trackerSvc.getWorkouts();
+
+        return "";
     }
 
 }

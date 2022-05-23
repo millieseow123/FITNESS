@@ -10,6 +10,9 @@ public interface Queries {
     public static final String SQL_SELECT_AND_COUNT_USERS_FROM_EMAIL = 
         "select count(*) as user_count from user where email = ? and password = sha1(?)";
 
-        public static final String SQL_INSERT_NEW_EXERCISE = 
+    public static final String SQL_INSERT_NEW_EXERCISE = 
         "insert into tracker (date, type_of_exercise, duration, calories, muscle_group, email) values (?, ?, ?, ?, ?, ?)";
+
+    public static final String SQL_SELECT_ALL_FROM_TRACKER =
+        "select * from tracker";
 }
