@@ -10,7 +10,7 @@
   
   <meta name="author" content="Themefisher.com">
 
-  <title>RIOT | Sign Up</title>
+  <title>RIOT | Muscle Groups</title>
 
 <!-- Mobile Specific Meta
   ================================================== -->
@@ -76,7 +76,7 @@ Fixed Navigation
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navigation">
+	  <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
           <li class="nav-item ">
             <a class="nav-link" href="about.html">About</a>
@@ -125,86 +125,84 @@ Fixed Navigation
 End Fixed Navigation
 ==================================== -->
 
-<section class="single-page-header">
+ <!--
+Welcome Slider
+==================================== -->
+
+ <section class="single-page-header">
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col-md-12">
+					<ol class="breadcrumb header-bradcrumb">
+					</ol>
+ 			</div>
+ 		</div>
+ 	</div>
+ </section>
+
+
+	<!--
+Start About Section
+==================================== -->
+<section class="about" id="about">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<h2>Sign Up</h2>
-				<ol class="breadcrumb header-bradcrumb">
-				</ol>
+		
+			<!-- section title -->
+			<div class="title text-center"  >
+				<h2>Get to know the different muscle groups</h2>
+				<form action="/muscleName">
+				<button type="submit" class="btn btn-main mt-20">Sort by Name</button></form>
+				<form method="GET" action="/muscleFront">
+					<select class="form-select" name="position">
+						<option selected>Sort by</option>
+						<option value="true">Anterior (Front) muscles</option>
+						<option value="false">Posterior (Back) muscles</option>
+					  </select>
+					<button type="submit" class="btn btn-main mt-20">Get Muscle Groups</button></form>
+					<br><h2 data-th-text="${muscle}"></h2><br>	
+					<div class="border"></div>
 			</div>
-		</div>
-	</div>
-</section>
-
-
-
-<section class="signup section text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Sign Up Here</h2>
-        <form method="POST" action="/signup">
-          <label for="full_name">Name</label>
-          <input type="text" name="full_name" placeholder="Name"><br>
-          <label for="dob">Date of Birth</label>
-          <input type="date" name="dob"><br>
-          <label for="email">Email</label>
-          <input type="text" name="email" placeholder="Enter Email"><br>
-          <label for="password">Password</label>
-          <input type="password" name="password" placeholder="Choose Password"><br>
-          <label for="password">Confirm Password</label>
-          <input type="password" name="password" placeholder="Confirm Password"><br>
-          <div class="loggedin-forgot d-inline-flex">
-            <input type="checkbox" id="registering" class="mt-1">
-            <label for="registering" class="px-2">By registering, you accept our <a class="text-primary font-weight-bold">Terms &
-                Conditions</a>.</label>
-          </div><br>
-          <button type="submit" class="btn btn-main mt-20">Sign Up</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
+			<!-- /section title -->
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
 
 
 <footer id="footer" class="bg-one">
-  <div class="top-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <h3>about</h3>
-          <p>A global destination to get the best workout of your life, we are dedicated to changing lives
-            worldwide through our workouts and community.</p>
-        </div>
-        <!-- End of .col-sm-3 -->
+	<div class="top-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-3 col-lg-3">
+					<h3>about</h3>
+					<p>A global destination to get the best workout of your life, we are dedicated to changing lives
+						worldwide through our workouts and community.</p>
+				</div>
+				<!-- End of .col-sm-3 -->
 
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li>
-              <h3>Connect with us </h3>
-            </li>
-            <li><a href="contact.html">Send a Message</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
+				<div class="col-sm-3 col-md-3 col-lg-3">
+					<ul>
+						<li>
+							<h3>Connect with us </h3>
+						</li>
+						<li><a href="contact.html">Send a Message</a></li>
+					</ul>
+				</div>
+				<!-- End of .col-sm-3 -->
 
-      </div>
-    </div> <!-- end container -->
-  </div>
-  <div class="footer-bottom">
-    <h5>Copyright 2016. All rights reserved.</h5>
-    <h6>Design and Developed by <a href="">Themefisher</a></h6>
-  </div>
+			</div>
+		</div> <!-- end container -->
+	</div>
+	<div class="footer-bottom">
+		<h5>Copyright 2016. All rights reserved.</h5>
+		<h6>Design and Developed by <a href="">Themefisher</a></h6>
+	</div>
 </footer> <!-- end footer -->
 
 
     <!-- end Footer Area
     ========================================== -->
-
+    
 
     
     <!-- 
@@ -238,3 +236,5 @@ End Fixed Navigation
 
   </body>
   </html>
+
+

@@ -10,7 +10,7 @@
   
   <meta name="author" content="Themefisher.com">
 
-  <title>RIOT | Sign Up</title>
+  <title>RIOT | Log Workout</title>
 
 <!-- Mobile Specific Meta
   ================================================== -->
@@ -129,7 +129,7 @@ End Fixed Navigation
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Sign Up</h2>
+				<h2>Log Your Workout</h2>
 				<ol class="breadcrumb header-bradcrumb">
 				</ol>
 			</div>
@@ -138,69 +138,77 @@ End Fixed Navigation
 </section>
 
 
+	<!-- Start Services Section
+		==================================== -->
 
-<section class="signup section text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Sign Up Here</h2>
-        <form method="POST" action="/signup">
-          <label for="full_name">Name</label>
-          <input type="text" name="full_name" placeholder="Name"><br>
-          <label for="dob">Date of Birth</label>
-          <input type="date" name="dob"><br>
-          <label for="email">Email</label>
-          <input type="text" name="email" placeholder="Enter Email"><br>
-          <label for="password">Password</label>
-          <input type="password" name="password" placeholder="Choose Password"><br>
-          <label for="password">Confirm Password</label>
-          <input type="password" name="password" placeholder="Confirm Password"><br>
-          <div class="loggedin-forgot d-inline-flex">
-            <input type="checkbox" id="registering" class="mt-1">
-            <label for="registering" class="px-2">By registering, you accept our <a class="text-primary font-weight-bold">Terms &
-                Conditions</a>.</label>
-          </div><br>
-          <button type="submit" class="btn btn-main mt-20">Sign Up</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="services" id="services">
+	<div class="container">
+		<div class="row">
+			<!-- section title -->
+			<div class="col-12">
+				<div class="title text-left">
+					<form method="POST" action="/log">
+						<div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Date</label>
+							<input type="date" class="form-control" name="date">
+						  </div>
+						  <div class="mb-3">
+							<label for="exampleFormControlTextarea1" class="form-label">Description of exercise</label>
+							<textarea class="form-control" name="type_of_exercise" rows="3" placeholder="i.e. 3x Deadlifts"></textarea>
+						  </div>
+						  <div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Duration</label>
+							<input type="text" class="form-control" name="duration" placeholder="i.e. 30 mins, 1 h">
+						  </div>
+						  <div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Calories Burnt</label>
+							<input type="text" class="form-control" name="calories" placeholder="i.e. 500">
+						  </div>
+						  <div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Muscle Group</label>
+							<input type="text" class="form-control" name="muscle_group" placeholder="i.e. arms, chest, full body">
+						  </div>
+						  <button type="submit" class="btn btn-main mt-20">Save exercise</button>
+						</form>
+					<div class="border"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+		</div>       <!-- End container -->
+	</section>    <!-- End Section -->
 
 
 
 
+  <footer id="footer" class="bg-one">
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<h3>about</h3>
+						<p>A global destination to get the best workout of your life, we are dedicated to changing lives
+							worldwide through our workouts and community.</p>
+					</div>
+					<!-- End of .col-sm-3 -->
 
-<footer id="footer" class="bg-one">
-  <div class="top-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <h3>about</h3>
-          <p>A global destination to get the best workout of your life, we are dedicated to changing lives
-            worldwide through our workouts and community.</p>
-        </div>
-        <!-- End of .col-sm-3 -->
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<ul>
+							<li>
+								<h3>Connect with us </h3>
+							</li>
+							<li><a href="contact.html">Send a Message</a></li>
+						</ul>
+					</div>
+					<!-- End of .col-sm-3 -->
 
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li>
-              <h3>Connect with us </h3>
-            </li>
-            <li><a href="contact.html">Send a Message</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-      </div>
-    </div> <!-- end container -->
-  </div>
-  <div class="footer-bottom">
-    <h5>Copyright 2016. All rights reserved.</h5>
-    <h6>Design and Developed by <a href="">Themefisher</a></h6>
-  </div>
-</footer> <!-- end footer -->
-
+				</div>
+			</div> <!-- end container -->
+		</div>
+		<div class="footer-bottom">
+			<h5>Copyright 2016. All rights reserved.</h5>
+			<h6>Design and Developed by <a href="">Themefisher</a></h6>
+		</div>
+	</footer> <!-- end footer -->
 
     <!-- end Footer Area
     ========================================== -->

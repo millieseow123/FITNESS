@@ -10,7 +10,7 @@
   
   <meta name="author" content="Themefisher.com">
 
-  <title>RIOT | Sign Up</title>
+  <title>RIOT | Workout Summary</title>
 
 <!-- Mobile Specific Meta
   ================================================== -->
@@ -87,10 +87,10 @@ Fixed Navigation
               Training
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="logWorkout.html">Log a Workout</a>
-			  <a class="dropdown-item" href="summary.html">Get Workout Summary</a>
-              <a class="dropdown-item" href="findWorkout.html">Find a Workout</a>
-              <a class="dropdown-item" href="musclegroups.html">Muscle Anatomy</a>
+              <a class="dropdown-item" href="logWorkout.html">Log a workout</a>
+			  <a class="dropdown-item" href="summary.html">Get workout summary</a>
+              <a class="dropdown-item" href="findWorkout.html">Find a workout</a>
+              <a class="dropdown-item" href="onepage-text.html">Knowing the different muscle groups</a>
             </div>
           </li>
           <li class="nav-item ">
@@ -129,7 +129,7 @@ End Fixed Navigation
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Sign Up</h2>
+				<h2>Workout Summary</h2>
 				<ol class="breadcrumb header-bradcrumb">
 				</ol>
 			</div>
@@ -138,69 +138,60 @@ End Fixed Navigation
 </section>
 
 
+	<!-- Start Services Section
+		==================================== -->
 
-<section class="signup section text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Sign Up Here</h2>
-        <form method="POST" action="/signup">
-          <label for="full_name">Name</label>
-          <input type="text" name="full_name" placeholder="Name"><br>
-          <label for="dob">Date of Birth</label>
-          <input type="date" name="dob"><br>
-          <label for="email">Email</label>
-          <input type="text" name="email" placeholder="Enter Email"><br>
-          <label for="password">Password</label>
-          <input type="password" name="password" placeholder="Choose Password"><br>
-          <label for="password">Confirm Password</label>
-          <input type="password" name="password" placeholder="Confirm Password"><br>
-          <div class="loggedin-forgot d-inline-flex">
-            <input type="checkbox" id="registering" class="mt-1">
-            <label for="registering" class="px-2">By registering, you accept our <a class="text-primary font-weight-bold">Terms &
-                Conditions</a>.</label>
-          </div><br>
-          <button type="submit" class="btn btn-main mt-20">Sign Up</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="services" id="services">
+	<div class="container">
+		<div class="row">
+			<!-- section title -->
+			<div class="col-12">
+				<div class="title text-left">
+
+          <h1>Your Progress</h1>
+          <form method="GET" action="/summary">
+          <button type="submit" class="btn btn-main mt-20">Show my workouts</button></form>
+
+
+          <div class="border"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+		</div>       <!-- End container -->
+	</section>    <!-- End Section -->
 
 
 
 
+  <footer id="footer" class="bg-one">
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<h3>about</h3>
+						<p>A global destination to get the best workout of your life, we are dedicated to changing lives
+							worldwide through our workouts and community.</p>
+					</div>
+					<!-- End of .col-sm-3 -->
 
-<footer id="footer" class="bg-one">
-  <div class="top-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <h3>about</h3>
-          <p>A global destination to get the best workout of your life, we are dedicated to changing lives
-            worldwide through our workouts and community.</p>
-        </div>
-        <!-- End of .col-sm-3 -->
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<ul>
+							<li>
+								<h3>Connect with us </h3>
+							</li>
+							<li><a href="contact.html">Send a Message</a></li>
+						</ul>
+					</div>
+					<!-- End of .col-sm-3 -->
 
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li>
-              <h3>Connect with us </h3>
-            </li>
-            <li><a href="contact.html">Send a Message</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-      </div>
-    </div> <!-- end container -->
-  </div>
-  <div class="footer-bottom">
-    <h5>Copyright 2016. All rights reserved.</h5>
-    <h6>Design and Developed by <a href="">Themefisher</a></h6>
-  </div>
-</footer> <!-- end footer -->
-
+				</div>
+			</div> <!-- end container -->
+		</div>
+		<div class="footer-bottom">
+			<h5>Copyright 2016. All rights reserved.</h5>
+			<h6>Design and Developed by <a href="">Themefisher</a></h6>
+		</div>
+	</footer> <!-- end footer -->
 
     <!-- end Footer Area
     ========================================== -->

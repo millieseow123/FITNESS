@@ -10,7 +10,7 @@
   
   <meta name="author" content="Themefisher.com">
 
-  <title>Bingo | Responsive Multipurpose Parallax HTML5 Template</title>
+  <title>RIOT | Nutrition</title>
 
 <!-- Mobile Specific Meta
   ================================================== -->
@@ -76,33 +76,31 @@ Fixed Navigation
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navigation">
+	  <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-          <li class="nav-item dropdown ">
+          <li class="nav-item ">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Homepage
+              Training
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="index.html">Homepage</a>
-              <a class="dropdown-item" href="onepage-slider.html">Onepage</a>
-              <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
+              <a class="dropdown-item" href="logWorkout.html">Log a Workout</a>
+			  <a class="dropdown-item" href="summary.html">Get Workout Summary</a>
+              <a class="dropdown-item" href="findWorkout.html">Find a Workout</a>
+              <a class="dropdown-item" href="musclegroups.html">Muscle Anatomy</a>
             </div>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="nutrition.html">Nutrition</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="service.html">Services</a>
+            <a class="nav-link" href="bodyweight.html">Body Weight</a>
           </li>
-          <li class="nav-item  active ">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="team.html">Team</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="pricing.html">Pricing</a>
+		  <li class="nav-item ">
+            <a class="nav-link" href="team.html">The Team</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -110,12 +108,11 @@ Fixed Navigation
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Pages
+              Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">404 Page</a>
-              <a class="dropdown-item" href="blog.html">Blog Page</a>
-              <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
+              <a class="dropdown-item" href="signup.html">Sign Up</a>
+              <a class="dropdown-item" href="signin.html">Sign In</a>
             </div>
           </li>
         </ul>
@@ -132,10 +129,8 @@ End Fixed Navigation
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Portfolio</h2>
+				<h2>Nutritional Data</h2>
 				<ol class="breadcrumb header-bradcrumb">
-				  <li><a href="index.html">Home</a></li>
-				  <li class="active">Portfolio</li>
 				</ol>
 			</div>
 		</div>
@@ -152,244 +147,61 @@ End Fixed Navigation
 
 				<!-- section title -->
 				<div class="title text-center">
-					<h2>Our Works</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, veritatis. Lorem ipsum dolor sit amet,
-						consectetur adipisicing elit. Minima, vitae? </p>
+					<div class="col-auto">
+						<div class="container">
+								<div class="col">
+									<form method="GET" action="/nutrition">
+										<label for="exampleFormControlInput1" class="form-label">Number of nutritional data to show</label>
+										<input type="text" class="form-control" name="limit"
+											placeholder="Enter any number to show data">
+										<button type="submit" class="btn btn-main mt-20">Get Food</button>
+									</form>
+								</div>
+						</div>
+					
 					<div class="border"></div>
 				</div>
 				<!-- /section title -->
-
-				<div class="portfolio-filter">
-					<button type="button" data-filter="all">All</button>
-					<button type="button" data-filter="photography">Photography</button>
-					<button type="button" data-filter="ios">IOS App</button>
-					<button type="button" data-filter="development">Development</button>
-					<button type="button" data-filter="design">Design</button>
-				</div>
-
-				<div class="row filtr-container">
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-1.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, ios">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-2.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-2.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, development">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-3.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-3.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, ios">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-4.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-4.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-5.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-5.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-6.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-6.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-7.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-7.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-						<div class="portfolio-block">
-							<img class="img-fluid" src="images/portfolio/portfolio-1.jpg" alt="">
-							<div class="caption">
-								<a class="search-icon" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
-									<i class="tf-ion-ios-search-strong"></i>
-								</a>
-								<h4><a href="">AirBnB Postcard</a></h4>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div> <!-- /end col-lg-12 -->
 		</div> <!-- end row -->
 	</div> <!-- end container -->
 </section> <!-- End section -->
 
 
-	<!-- Start Testimonial
-=========================================== -->
-		
-	<section class="testimonial section" id="testimonial">
-		<div class="container">
-			<div class="row">				
-				<div class="col-lg-12">
-					<!-- testimonial wrapper -->
-					<div class="testimonial-slider">
-						<!-- testimonial single -->
-						<div class="item text-center">
-							<i class="tf-ion-chatbubbles"></i>
-							<!-- client info -->
-							<div class="client-details">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-							</div>
-							<!-- /client info -->
-							<!-- client photo -->
-							<div class="client-thumb">
-								<img src="images/client-logo/clients-1.jpg" class="img-fluid" alt="">
-							</div>
-							<div class="client-meta">
-								<h3>William Martin</h3>
-								<span>CEO , Company Name</span>
-							</div>
-							<!-- /client photo -->
-						</div>
-						<!-- /testimonial single -->
-				
-						<!-- testimonial single -->
-						<div class="item text-center">
-							<i class="tf-ion-chatbubbles"></i>
-							<!-- client info -->
-							<div class="client-details">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-							</div>
-							<!-- /client info -->
-							<!-- client photo -->
-							<div class="client-thumb">
-								<img src="images/client-logo/clients-2.jpg" class="img-fluid" alt="">
-							</div>
-							<div class="client-meta">
-								<h3>Emma Harrison</h3>
-								<span>CEO , Company Name</span>
-							</div>
-							<!-- /client photo -->
-						</div>
-						<!-- /testimonial single -->
-					
-						<!-- testimonial single -->
-						<div class="item text-center">
-							<i class="tf-ion-chatbubbles"></i>
-							<!-- client info -->
-							<div class="client-details">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-							</div>
-							<!-- /client info -->
-							<!-- client photo -->
-							<div class="client-thumb">
-								<img src="images/client-logo/clients-3.jpg" class="img-fluid" alt="">
-							</div>
-							<div class="client-meta">
-								<h3>Alexander Lucas</h3>
-								<span>CEO , Company Name</span>
-							</div>
-							<!-- /client photo -->
-						</div>
-						<!-- /testimonial single -->
+	
+
+
+
+
+	<footer id="footer" class="bg-one">
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<h3>about</h3>
+						<p>A global destination to get the best workout of your life, we are dedicated to changing lives
+							worldwide through our workouts and community.</p>
 					</div>
-				</div> 		<!-- end col lg 12 -->
-			</div>	    <!-- End row -->
-		</div>       <!-- End container -->
-	</section>    <!-- End Section -->
+					<!-- End of .col-sm-3 -->
 
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<ul>
+							<li>
+								<h3>Connect with us </h3>
+							</li>
+							<li><a href="contact.html">Send a Message</a></li>
+						</ul>
+					</div>
+					<!-- End of .col-sm-3 -->
 
-
-
-<footer id="footer" class="bg-one">
-  <div class="top-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <h3>about</h3>
-          <p>Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere.</p>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li><h3>Our Services</h3></li>
-            <li><a href="#">Graphic Design</a></li>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li><h3>Quick Links</h3></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">FAQ’s</a></li>
-            <li><a href="#">Badges</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li><h3>Connect with us Socially</h3></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Youtube</a></li>
-            <li><a href="#">Pinterest</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-      </div>
-    </div> <!-- end container -->
-  </div>
-  <div class="footer-bottom">
-    <h5>Copyright 2016. All rights reserved.</h5>
-    <h6>Design and Developed by <a href="">Themefisher</a></h6>
-  </div>
-</footer> <!-- end footer -->
+				</div>
+			</div> <!-- end container -->
+		</div>
+		<div class="footer-bottom">
+			<h5>Copyright 2016. All rights reserved.</h5>
+			<h6>Design and Developed by <a href="">Themefisher</a></h6>
+		</div>
+	</footer> <!-- end footer -->
 
 
     <!-- end Footer Area

@@ -46,6 +46,9 @@ public class Tracker {
     public void setEmail(String email) {
         this.email = email;
     }
+    public static Tracker create(String body) {
+        return null;
+    }
 
     
 }
