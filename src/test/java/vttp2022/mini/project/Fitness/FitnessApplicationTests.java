@@ -86,17 +86,6 @@ class FitnessApplicationTests {
 		fail("Did not throw FitnessException when email exists");
 	}
 
-	@Test
-	void signinShouldFail() {
-		try {
-			userSvc.authenticate("test@gmail.com", "sha1");
-		} catch (Exception e) {
-			assertTrue(true);
-			return;
-		}
-		fail("invalid");
-	}
-
 	//test controller
 	@Test
 	void contextLoads() {
