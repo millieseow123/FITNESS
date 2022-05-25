@@ -56,6 +56,10 @@ public class HTMLController {
     public String summary() {
         return "summary";
     }
+    @GetMapping("summaryButton.html") 
+    public String summaryButton() {
+        return "summaryButton";
+    }
 
     @GetMapping("musclegroups.html") 
     public String musclegroups() {
