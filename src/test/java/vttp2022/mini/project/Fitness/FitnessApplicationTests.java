@@ -75,16 +75,7 @@ class FitnessApplicationTests {
 		userRepo.deleteUserByEmail(fred.getEmail());
 	}
 
-	@Test
-	void insertFredShouldFail() {
-		try {
-			userSvc.addNewUser(fred);
-		} catch (FitnessException e) {
-			assertTrue(true);
-			return;
-		}
-		fail("Did not throw FitnessException when email exists");
-	}
+
 
 	//test controller
 	@Test
