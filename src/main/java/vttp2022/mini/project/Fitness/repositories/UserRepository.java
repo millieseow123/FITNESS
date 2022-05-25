@@ -37,4 +37,9 @@ public class UserRepository {
             return 0;
         return rs.getInt("user_count");
     }
+
+    public boolean deleteUserByEmail(String email) {
+        int count = template.update(SQL_DELETE_USER_BY_EMAIL, email);
+        return 1 == count;
+    }
 }

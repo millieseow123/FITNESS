@@ -39,7 +39,7 @@ public class AuthenticateController {
             mvc.setStatus(HttpStatus.BAD_REQUEST);
             e.printStackTrace();
         }
-        mvc.setViewName("index");
+        mvc.setViewName("signUpSuccess");
         return mvc;
     }
 

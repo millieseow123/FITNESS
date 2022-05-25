@@ -15,4 +15,7 @@ public interface Queries {
 
     public static final String SQL_SELECT_ALL_FROM_TRACKER =
         "select * from tracker";
+
+    public static final String SQL_DELETE_USER_BY_EMAIL =
+        "delete from user where email = ?";
 }

@@ -34,7 +34,8 @@ public class FitnessController {
 
     @PostMapping("/log") 
     public ModelAndView logExercise(@RequestBody MultiValueMap<String, String> form, HttpSession sess ) {
-        form.add("email", (String)sess.getAttribute("username"));
+        String username = (String)sess.getAttribute("username");
+        form.add("email", username);
         Tracker tracker = convertExercise(form);
    
         ModelAndView mvc = new ModelAndView();
@@ -85,7 +86,7 @@ public class FitnessController {
         List<String> muscle = trackerSvc.getMuscleName(name);
         String HTMLstring = muscle.toString().replaceAll("[\\[\\]]", "");
         mvc.addObject("muscle", HTMLstring);
-        mvc.setViewName("musclegroups");
+        mvc.setViewName("musclegroupsResults");
 
         return mvc;
     }
@@ -97,7 +98,7 @@ public class FitnessController {
         List<String> muscle = trackerSvc.getMusclePosition(position);
         String HTMLstring = muscle.toString().replaceAll("[\\[\\]]", "");
         mvc.addObject("muscle", HTMLstring);
-        mvc.setViewName("musclegroups");
+        mvc.setViewName("musclegroupsResults");
 
         return mvc;
     }

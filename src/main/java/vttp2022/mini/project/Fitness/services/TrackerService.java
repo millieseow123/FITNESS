@@ -111,7 +111,6 @@ public class TrackerService {
                 .queryParam("is_front", position)
                 .toUriString();
         RequestEntity<Void> req = RequestEntity.get(url).build();
-        System.out.println(">>>>>>. req " + req);
 
         RestTemplate template = new RestTemplate();
 
